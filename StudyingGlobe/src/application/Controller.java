@@ -2,7 +2,10 @@ package application;
 
 import java.awt.Event;
 import java.text.SimpleDateFormat;
+import java.time.Duration;
 import java.util.Date;
+import java.util.Timer;
+import java.util.concurrent.TimeUnit;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -14,7 +17,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
-public class Controller {
+public class Controller extends thread{
 
 	
 	
@@ -32,8 +35,11 @@ public class Controller {
 		private Parent root;
 		private Stage stage;
 		
-		public boolean start = false;
-		boolean test;
+
+		int x = 0;		
+		
+		thread t = new thread();
+		
 		@FXML
 		public void pressed(ActionEvent event) throws Exception
 		{
@@ -46,17 +52,18 @@ public class Controller {
 			scene = new Scene(root);
 			stage.setScene(scene);
 			stage.show();
-			
-			start = true;
-			timer();
-	
+		
+			t.start();
 					
 		}
 		
 		@FXML
 		public void end(ActionEvent event) throws Exception
 		{
-			start = false;
+		
+			t.setboolean();
+			System.out.println("stop");
+			
 			Date currentDate = new Date();
 			SimpleDateFormat timeFormat = new SimpleDateFormat("h:mm a");
 			System.out.println(timeFormat.format(currentDate));
@@ -66,25 +73,8 @@ public class Controller {
 			scene = new Scene(root);
 			stage.setScene(scene);
 			stage.show();
-		
-			
+					
 		}
 		
-		
-		public void timer() throws InterruptedException
-		{
-			int x = 0;
-			
-			
-			while(start)
-			{
-				
-				Thread.sleep(1000);
-				System.out.println(x);
-				x++;				
-			}
-			
-			return;
-		}
 		
 } 
