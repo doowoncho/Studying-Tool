@@ -29,13 +29,14 @@ public class Controller extends thread{
 		private Button button;
 		
 		@FXML
-		Button btwn;
+		private Button btwn;
 		
 		private Scene scene;
 		private Parent root;
 		private Stage stage;
 		
-
+		public boolean started = false;
+		public boolean pause = false;
 		int x = 0;		
 		
 		thread t = new thread();
@@ -60,20 +61,53 @@ public class Controller extends thread{
 		@FXML
 		public void end(ActionEvent event) throws Exception
 		{
-		
-			t.setboolean();
-			System.out.println("stop");
 			
+			if(started == false)
+			{
+				t.pause();
+				started = true;
+			}
+	
+				
+				cont();
+
+			
+			
+			
+			/*
+			 * Parent root = FXMLLoader.load(getClass().getResource("Main.fxml")); stage =
+			 * (Stage)((Node)event.getSource()).getScene().getWindow(); scene = new
+			 * Scene(root); stage.setScene(scene); stage.show();
+			 */
+					
+		}
+		
+		public void cont()
+		{
+			if(pause == true)
+			{
+				btwn.setText("pause");
+				pause = false;
+				
+				t.go();
+		
+			
+			}
+			else
+			{
+				btwn.setText("continue");
+				pause = true;
+				t.pause();
+				
+			
+			}
+		}
+		
+		public void showTime()
+		{
 			Date currentDate = new Date();
 			SimpleDateFormat timeFormat = new SimpleDateFormat("h:mm a");
 			System.out.println(timeFormat.format(currentDate));
-			
-			Parent root = FXMLLoader.load(getClass().getResource("Main.fxml"));
-			stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-			scene = new Scene(root);
-			stage.setScene(scene);
-			stage.show();
-					
 		}
 		
 		

@@ -17,6 +17,6 @@
             </ImageView>
          </children>
       </Pane>
-      <Button fx:id="Button2" layoutX="178.0" layoutY="377.0" mnemonicParsing="false" onAction="#end" prefHeight="43.0" prefWidth="63.0" text="nice" />
+      <Button fx:id="btwn" layoutX="178.0" layoutY="377.0" mnemonicParsing="false" onAction="#end" prefHeight="43.0" prefWidth="63.0" text="pause" />
    </children>
 </AnchorPane>
