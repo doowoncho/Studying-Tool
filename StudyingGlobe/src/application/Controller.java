@@ -7,6 +7,7 @@ import java.util.Date;
 import java.util.Timer;
 import java.util.concurrent.TimeUnit;
 
+import javafx.animation.ScaleTransition;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -15,11 +16,15 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
 public class Controller extends thread{
 
 	
+		@FXML
+		private ImageView img;
 	
 		@FXML
 		
@@ -55,6 +60,7 @@ public class Controller extends thread{
 			stage.show();
 		
 			t.start();
+			
 					
 		}
 		
@@ -62,6 +68,8 @@ public class Controller extends thread{
 		public void end(ActionEvent event) throws Exception
 		{
 			
+			animate();
+
 			if(started == false)
 			{
 				t.pause();
@@ -90,6 +98,9 @@ public class Controller extends thread{
 				pause = false;
 				
 				t.go();
+				
+				
+				
 		
 			
 			}
@@ -98,6 +109,8 @@ public class Controller extends thread{
 				btwn.setText("continue");
 				pause = true;
 				t.pause();
+			
+				
 				
 			
 			}
@@ -108,6 +121,19 @@ public class Controller extends thread{
 			Date currentDate = new Date();
 			SimpleDateFormat timeFormat = new SimpleDateFormat("h:mm a");
 			System.out.println(timeFormat.format(currentDate));
+		}
+		
+		
+		public void animate()
+		{
+			ScaleTransition scale = new ScaleTransition();
+			scale.setNode(img);
+			
+			scale.setDuration(javafx.util.Duration.millis(1000));
+			scale.setCycleCount(-1);
+			scale.setByX(0.05);
+			scale.setAutoReverse(true);
+			scale.play();
 		}
 		
 		
