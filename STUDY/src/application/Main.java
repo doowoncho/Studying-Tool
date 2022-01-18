@@ -1,25 +1,28 @@
 package application;
 	
 import javafx.application.Application;
+import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
-import javafx.scene.Parent;
+import javafx.stage.StageStyle;
+import javafx.stage.WindowEvent;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
-import javafx.scene.paint.Color;
-import javafx.scene.shape.Rectangle;
+import javafx.scene.layout.VBox;
 
 
 public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		try {
-			
-			AnchorPane root = (AnchorPane) FXMLLoader.load(Main.class.getResource("Main.fxml"));		
-			primaryStage.setScene(new Scene(root));
-			primaryStage.setTitle("up");
+			VBox root = (VBox) FXMLLoader.load(Main.class.getResource("main.fxml"));		
+			primaryStage.setScene(new Scene(root));	
 			primaryStage.show();
+	
+
+			
+
 			
 		} catch(Exception e) {
 			e.printStackTrace();
@@ -27,8 +30,6 @@ public class Main extends Application {
 	}
 	
 	public static void main(String[] args) {
-		
 		launch(args);
-	
 	}
 }

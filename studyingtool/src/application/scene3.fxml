@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="202.0" prefWidth="243.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/16">
+   <children>
+      <Text layoutX="69.0" layoutY="114.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Time Studied" wrappingWidth="105.638671875" />
+      <ScrollPane layoutX="-200.0" layoutY="-126.0" prefHeight="200.0" prefWidth="200.0" />
+   </children>
+</AnchorPane>
