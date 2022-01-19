@@ -71,7 +71,20 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button fx:id="endButton" disable="true" mnemonicParsing="false" onAction="#End" text="End" translateY="100.0" visible="false" />
-      <Text fx:id="actStudy" strokeType="OUTSIDE" strokeWidth="0.0" text="Actually studied: " visible="false" wrappingWidth="184.34765625" />
+      <Button fx:id="endButton" alignment="CENTER" disable="true" mnemonicParsing="false" onAction="#End" onMousePressed="#drag" onMouseReleased="#undrag" prefHeight="36.0" prefWidth="35.0" style="-fx-background-color: transparent;" translateY="60.0" visible="false">
+         <graphic>
+            <ImageView fitHeight="70.0" fitWidth="78.0" translateX="-14.0">
+               <image>
+                  <Image url="@../../../../../../../Desktop/power.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+         <padding>
+            <Insets bottom="-100.0" left="-70.0" right="-100.0" top="-100.0" />
+         </padding></Button>
+      <Text fx:id="actStudy" strokeType="OUTSIDE" strokeWidth="0.0" text="Actually studied: " visible="false" wrappingWidth="287.34765625" />
    </children>
 </VBox>

@@ -146,12 +146,15 @@ public class Controller {
 	@FXML
 	public void drag(MouseEvent event) throws Exception
 	{
-	
-		i.setBlendMode(BlendMode.DARKEN);
-		p.setBlendMode(BlendMode.DARKEN);
-		con.setBlendMode(BlendMode.DARKEN);
+		if(checking == false)
+		{
+			i.setBlendMode(BlendMode.DARKEN);
+			p.setBlendMode(BlendMode.DARKEN);
+			con.setBlendMode(BlendMode.DARKEN);
+			
+		}
 		
-
+		endButton.setBlendMode(BlendMode.DARKEN);
 		holdTime = realTime;
 		
 		
@@ -165,9 +168,13 @@ public class Controller {
 	{
 		holdTime = 0;
 		
-		i.setBlendMode(BlendMode.SRC_OVER);
-		p.setBlendMode(BlendMode.SRC_OVER);
-		con.setBlendMode(BlendMode.SRC_OVER);
+
+			i.setBlendMode(BlendMode.SRC_OVER);
+			p.setBlendMode(BlendMode.SRC_OVER);
+			con.setBlendMode(BlendMode.SRC_OVER);
+
+	
+		endButton.setBlendMode(BlendMode.SRC_OVER);
 		//i1.setVisible(false);
 	}
 	
@@ -227,7 +234,11 @@ public class Controller {
 		endStudy.setVisible(true);
 		startStudy.setVisible(true);
 
+		conB.setVisible(false);
+		conB.setDisable(true);
 		
+		p.setVisible(false);
+		pButton.setDisable(true);
 		
 	}
 	
