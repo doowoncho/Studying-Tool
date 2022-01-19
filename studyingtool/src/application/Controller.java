@@ -94,7 +94,6 @@ public class Controller extends thread{
 			SimpleDateFormat timeFormat = new SimpleDateFormat("h:mm a");
 			System.out.println(timeFormat.format(currentDate));
 			
-			
 		}
 		
 		

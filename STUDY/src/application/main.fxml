@@ -7,11 +7,23 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="279.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="444.0" prefWidth="530.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
    <children>
-      <Circle fx:id="c" fill="#6ec7ff" radius="6.0" stroke="TRANSPARENT" strokeType="INSIDE" translateY="5.0" />
-      <Button fx:id="b" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#Start" onMousePressed="#drag" onMouseReleased="#undrag" prefHeight="43.0" prefWidth="81.0" style="-fx-background-color: transparent;" translateY="55.0" VBox.vgrow="ALWAYS">
+      <Circle fx:id="c" fill="#6ec7ff" radius="6.0" stroke="TRANSPARENT" strokeType="INSIDE" translateY="30.0" />
+      <Text fx:id="startStudy" strokeType="OUTSIDE" strokeWidth="0.0" text="Started studying at: 3213" visible="false" wrappingWidth="481.34765625">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fx:id="endStudy" strokeType="OUTSIDE" strokeWidth="0.0" text="Finished studying at:  0:00 PM" visible="false" wrappingWidth="481.34765625">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Button fx:id="b" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#Start" onMousePressed="#drag" onMouseReleased="#undrag" prefHeight="43.0" prefWidth="81.0" style="-fx-background-color: transparent;" translateY="100.0" VBox.vgrow="ALWAYS">
          <VBox.margin>
             <Insets />
          </VBox.margin>
@@ -29,7 +41,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button fx:id="pButton" alignment="CENTER" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#Pause" onMousePressed="#drag" onMouseReleased="#undrag" prefHeight="43.0" prefWidth="81.0" style="-fx-background-color: transparent;" translateY="13.0">
+      <Button fx:id="pButton" alignment="CENTER" contentDisplay="CENTER" disable="true" mnemonicParsing="false" onAction="#Pause" onMousePressed="#drag" onMouseReleased="#undrag" prefHeight="43.0" prefWidth="81.0" style="-fx-background-color: transparent;" translateY="58.0">
          <padding>
             <Insets bottom="-40.0" left="-40.0" right="-40.0" top="-40.0" />
          </padding>
@@ -44,7 +56,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button fx:id="conB" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#Continue" onMousePressed="#drag" onMouseReleased="#undrag" prefHeight="43.0" prefWidth="81.0" style="-fx-background-color: transparent;" translateY="-30.0" visible="false">
+      <Button fx:id="conB" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#Continue" onMousePressed="#drag" onMouseReleased="#undrag" prefHeight="43.0" prefWidth="81.0" style="-fx-background-color: transparent;" translateY="15.0" visible="false">
          <padding>
             <Insets bottom="-40.0" left="-40.0" right="-40.0" top="-40.0" />
          </padding>
@@ -59,5 +71,7 @@
             </ImageView>
          </graphic>
       </Button>
+      <Button fx:id="endButton" disable="true" mnemonicParsing="false" onAction="#End" text="End" translateY="100.0" visible="false" />
+      <Text fx:id="actStudy" strokeType="OUTSIDE" strokeWidth="0.0" text="Actually studied: " visible="false" wrappingWidth="184.34765625" />
    </children>
 </VBox>
