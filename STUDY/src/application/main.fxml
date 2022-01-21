@@ -33,7 +33,7 @@
          <graphic>
             <ImageView fx:id="i" fitHeight="88.0" fitWidth="97.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../../../Desktop/button.png" />
+                  <Image url="@../../Images/button.png" />
                </image>
                <cursor>
                   <Cursor fx:constant="DEFAULT" />
@@ -48,7 +48,7 @@
          <graphic>
             <ImageView fx:id="p" fitHeight="88.0" fitWidth="97.0" nodeOrientation="INHERIT" onMousePressed="#drag" onMouseReleased="#undrag" pickOnBounds="true" preserveRatio="true" visible="false">
                <image>
-                  <Image url="@../../../../../../../Desktop/pause.png" />
+                  <Image url="@../../Images/pause.png" />
                </image>
                <cursor>
                   <Cursor fx:constant="DEFAULT" />
@@ -63,7 +63,7 @@
          <graphic>
             <ImageView fx:id="con" fitHeight="101.0" fitWidth="102.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../../../Desktop/continue.png" />
+                  <Image url="@../../Images/continue.png" />
                </image>
                <cursor>
                   <Cursor fx:constant="DEFAULT" />
@@ -75,7 +75,7 @@
          <graphic>
             <ImageView fitHeight="70.0" fitWidth="78.0" translateX="-14.0">
                <image>
-                  <Image url="@../../../../../../../Desktop/power.png" />
+                  <Image url="@../../Images/power.png" />
                </image>
             </ImageView>
          </graphic>
