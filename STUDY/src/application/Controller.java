@@ -228,7 +228,7 @@ public class Controller {
 		float actTime = 100 * (sec/realTime) ;			
 		System.out.println("Actually studied "+ actTime + "% of the time");
 		
-		actStudy.setText("Actually studied "+ actTime + "% of the time");
+		actStudy.setText("Actually studied "+ actTime + "% of the time or " +seconds +" seconds out of "+rseconds);
 		actStudy.setVisible(true);
 		endStudy.setText("Finished studying at: "+ timeFormat.format(currentDate));
 		endStudy.setVisible(true);
